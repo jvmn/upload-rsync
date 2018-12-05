@@ -1,0 +1,20 @@
+{
+    "stage": {
+        "dev": {
+            "dest": "",
+            "src": [],
+            "delete": false
+        },
+        "test": {
+            "dest": "",
+            "src": [],
+            "delete": false
+        },
+        "prod":{
+            "dest": "",
+            "src": [],
+            "delete": false
+        }
+    },
+    "logfile": ""
+}
