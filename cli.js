@@ -9,7 +9,7 @@ try{
     const rsync = new Rsync()
     
     const cmd = new transfer.cmd()
-    const config = new transfer.config(cmd, 'deploy.config.json')
+    const config = new transfer.config(cmd, 'upload-rsync.config.json')
     new transfer.rsync(config, util).run(rsync);
 } catch (err) {
     console.log(err.stack)
