@@ -44,9 +44,35 @@ logfile        | you can set a logfile location. the logfiles holds informations
 If you configured a "upload-rsync.config.json"-file, you can use the following cli command.
 
 ```
+npx upload-rsync [options]
 ```
 
+Before the execution of the rsync upload you will and get a prompt with the actual rsync command if you want to proceed.
+
+#### Commandline Options
+
+Name           | Description
+-------------- | ------------
+--help         | Show help
+--version      | Show version number
+--prod, -p     | Upload to prod stage 
+--test, -t     | Upload to test stage
+--dev, -d      | Upload to dev stage (default)
+--verbose, -v  | More information output
+ --yes, -y     | Avoid prompting for rsync execution
+
+# Scripting
+
+You can also write your own script. Here is an example.
+
+''
+
 ## Changelog
+
+0.0.2
+
+- refactoring
+- command line prompt for execution
 
 0.0.1
 
