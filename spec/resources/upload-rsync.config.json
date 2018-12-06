@@ -1,0 +1,29 @@
+{
+    "stage": {
+        "dev": {
+            "dest": "user@dev.example.com:/path/to/dev",
+            "src": [
+                "spec",
+                "lib"
+            ],
+            "delete": false
+        },
+        "test": {
+            "dest": "user@test.example.com:/path/to/test",
+            "src": [
+                "spec",
+                "lib"
+            ],
+            "delete": true
+        },
+        "prod":{
+            "dest": "user@prod.example.com:/path/to/prod",
+            "src": [
+                "spec",
+                "lib"
+            ],
+            "delete": false
+        }
+    },
+    "logfile": "rsync.log"
+}

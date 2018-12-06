@@ -1,0 +1,22 @@
+{
+    "important-notice": 
+        "!! be very careful with the delete flag, you can wipe out an entire server, if you make a mistake with the destination folder. so it is wise to test first without an aktive delete flag !!",
+    "stage": {
+        "dev": {
+            "dest": "",
+            "src": [],
+            "delete": false
+        },
+        "test": {
+            "dest": "",
+            "src": [],
+            "delete": false
+        },
+        "prod":{
+            "dest": "",
+            "src": [],
+            "delete": false
+        }
+    },
+    "logfile": ""
+}
