@@ -20,13 +20,13 @@ yarn:
 yarn add @jvmn/upload-rsync --dev
 ```
 
-## Configurtion
+## Configuration
 
-Create a "upload-rsync.config.json" in your root directory. You can copy it from here [blob/master/upload-rsync.config.json] (https://github.com/jvmn/upload-rsync/blob/master/upload-rsync.config.json)
+Create a "upload-rsync.config.json"-file in your root directory. You can copy it from here [blob/master/upload-rsync.config.json](https://github.com/jvmn/upload-rsync/blob/master/upload-rsync.config.json)
 
-The configuration options are aliases of the rsync options. You can find them hre [man rsync] (https://linux.die.net/man/1/rsync)
+The configuration options are aliases of the rsync options. You can find them here [man rsync](https://linux.die.net/man/1/rsync)
 
-You can configure three stages dev, test and prod.
+You can configure three stages dev, test and prod, with the following options.
 
 ### Options
 
