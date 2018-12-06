@@ -2,15 +2,34 @@
 'use strict';
 
 const transfer = require('./index');
-const util     = require('./lib/util');
-const Rsync    = require('rsync');
+const inquirer = require('inquirer');
 
 try{
-    const rsync = new Rsync()
-    
-    const cmd = new transfer.cmd()
-    const config = new transfer.config(cmd, 'upload-rsync.config.json')
-    new transfer.rsync(config, util).run(rsync);
+    const rsync = new transfer.rsync()
+        .init()
+        .setup();
+
+    const config = rsync.config;
+
+    console.log("rsync command: \n" + rsync.rsync.command());
+
+    if (config.executeWithoutPrompt()) {
+        rsync.run();
+    } else {
+        inquirer.prompt([
+            {
+              type: 'confirm',
+              name: 'execute',
+              message: 'Start upload?',
+              default: true
+            }
+          ])
+          .then(answers => {
+            if (answers.execute) {
+                rsync.run();
+            }
+          });
+    }
 } catch (err) {
     console.log(err.stack)
 }
