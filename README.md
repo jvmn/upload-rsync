@@ -37,3 +37,17 @@ src            | SRC of the rsync command. Needs to be an array. e.g. [ "local/p
 delete         | --delete flag of the rsync command. deletes extraneous files from dest dirs
 logfile        | you can set a logfile location. the logfiles holds informations about the last upload.
 
+## Usage
+
+### Command line
+
+If you configured a "upload-rsync.config.json"-file, you can use the following cli command.
+
+```
+```
+
+## Changelog
+
+0.0.1
+
+- initial version
