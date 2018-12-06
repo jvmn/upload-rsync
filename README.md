@@ -20,3 +20,20 @@ yarn:
 yarn add @jvmn/upload-rsync --dev
 ```
 
+## Configurtion
+
+Create a "upload-rsync.config.json" in your root directory. You can copy it from here [blob/master/upload-rsync.config.json] (https://github.com/jvmn/upload-rsync/blob/master/upload-rsync.config.json)
+
+The configuration options are aliases of the rsync options. You can find them hre [man rsync] (https://linux.die.net/man/1/rsync)
+
+You can configure three stages dev, test and prod.
+
+### Options
+
+Name           | Description
+-------------- | ------------
+dest           | DEST ([USER@]HOST:DEST) of the rsync command. e.g. "user@example.com:/path/to/dest"
+src            | SRC of the rsync command. Needs to be an array. e.g. [ "local/path1", "local/path2", ... ]
+delete         | --delete flag of the rsync command. deletes extraneous files from dest dirs
+logfile        | you can set a logfile location. the logfiles holds informations about the last upload.
+
