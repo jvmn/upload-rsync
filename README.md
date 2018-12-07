@@ -65,7 +65,43 @@ Name           | Description
 
 You can also write your own script. Here is an example.
 
-''
+```
+#!/usr/bin/env node
+'use strict';
+
+const upload = require('@jvmn/upload-rsync');
+const inquirer = require('inquirer');
+
+try{
+    const rsync = new upload.rsync()
+        .init()
+        .setup();
+
+    const config = rsync.config;
+
+    console.log("rsync command: \n" + rsync.rsync.command());
+
+    if (config.executeWithoutPrompt()) {
+        rsync.run();
+    } else {
+        inquirer.prompt([
+            {
+              type: 'confirm',
+              name: 'execute',
+              message: 'Start upload?',
+              default: true
+            }
+          ])
+          .then(answers => {
+            if (answers.execute) {
+                rsync.run();
+            }
+          });
+    }
+} catch (err) {
+    console.log(err.stack)
+}
+```
 
 ## Changelog
 
