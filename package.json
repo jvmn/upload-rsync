@@ -1,6 +1,6 @@
 {
   "name": "@jvmn/upload-rsync",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sync files and folders over ssh with a remote server",
   "repository": {
     "type": "git",
@@ -22,10 +22,12 @@
   "scripts": {
     "test": "jasmine"
   },
-  "devDependencies": {
+  "dependencies": {
     "inquirer": "^6.2.1",
-    "jasmine": "^3.3.0",
     "rsync": "^0.6.1",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "jasmine": "^3.3.0"
   }
 }
