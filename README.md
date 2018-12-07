@@ -3,6 +3,7 @@
 ## What is this script doing?
 
 This script offers an command to upload files and folders from your projectfolder to your remote environment (dev, test and prod).
+For example this can be your build folder. 
 
 ## How is it doing it?
 
@@ -36,6 +37,12 @@ dest           | DEST ([USER@]HOST:DEST) of the rsync command. e.g. "user@exampl
 src            | SRC of the rsync command. Needs to be an array. e.g. [ "local/path1", "local/path2", ... ]
 delete         | --delete flag of the rsync command. deletes extraneous files from dest dirs
 logfile        | you can set a logfile location. the logfiles holds informations about the last upload.
+
+## Authorization
+
+To use rsync you need a valid ssh user on the destination server. By default you can use passwort authorization. 
+More convenient is the usage of ssh-key authorization.
+See [https://wiki.ubuntuusers.de/SSH/](https://wiki.ubuntuusers.de/SSH/) for a detailed explanation of how to use ssh keys.
 
 ## Usage
 
