@@ -22,10 +22,12 @@
   "scripts": {
     "test": "jasmine"
   },
-  "devDependencies": {
+  "dependencies": {
     "inquirer": "^6.2.1",
-    "jasmine": "^3.3.0",
     "rsync": "^0.6.1",
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "jasmine": "^3.3.0"
   }
 }
