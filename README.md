@@ -105,6 +105,10 @@ try{
 
 ## Changelog
 
+0.0.3
+
+- dependencies revision
+
 0.0.2
 
 - refactoring
@@ -112,4 +116,4 @@ try{
 
 0.0.1
 
-- initial version
+- initial release
