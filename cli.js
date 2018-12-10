@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 
-const transfer = require('./index');
+const upload = require('./index');
 const inquirer = require('inquirer');
 
-try{
-    const rsync = new transfer.rsync()
+try {
+    const config = new upload.config()
+        .init('upload-rsync.config.json');
+
+    const rsync = new upload.rsync()
+        .setConfig(config)
         .init()
         .setup();
-
-    const config = rsync.config;
 
     console.log("rsync command: \n" + rsync.rsync.command());
 
@@ -18,17 +20,17 @@ try{
     } else {
         inquirer.prompt([
             {
-              type: 'confirm',
-              name: 'execute',
-              message: 'Start upload?',
-              default: true
+                type: 'confirm',
+                name: 'execute',
+                message: 'Start upload?',
+                default: true
             }
-          ])
-          .then(answers => {
-            if (answers.execute) {
-                rsync.run();
-            }
-          });
+        ])
+            .then(answers => {
+                if (answers.execute) {
+                    rsync.run();
+                }
+            });
     }
 } catch (err) {
     console.log(err.stack)
