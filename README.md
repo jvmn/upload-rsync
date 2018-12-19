@@ -117,8 +117,9 @@ try {
 
 ## Changelog
 
-0.0.6
+0.0.6, 0.0.7
 
+- bump version for npm
 - documentation fixes
 
 0.0.5
