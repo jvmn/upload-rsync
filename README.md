@@ -85,8 +85,8 @@ try {
     });
     const config = new upload.config(cmd)
         .setConfig({
-            dest: 'admin@devel-vmware.neckar.jvm.de:/home/fractal/public_html/rsync',
-            src: ['build'],
+            dest: 'user@example.com:/path/to/src',
+            src: ['folder'],
             logfile: 'logfile',
             delete: false
         })
