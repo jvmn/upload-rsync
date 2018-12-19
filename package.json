@@ -1,6 +1,6 @@
 {
   "name": "@jvmn/upload-rsync",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Upload files and folders via rsync over ssh to a remote server",
   "repository": {
     "type": "git",
