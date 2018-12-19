@@ -112,6 +112,10 @@ try{
 
 ## Changelog
 
+0.0.4
+
+- refactored config file dependency
+
 0.0.3
 
 - dependencies revision
