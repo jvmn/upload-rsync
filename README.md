@@ -117,6 +117,10 @@ try {
 
 ## Changelog
 
+0.0.6
+
+- documentation fixes
+
 0.0.5
 
 - refactored dependency injection
