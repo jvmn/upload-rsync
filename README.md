@@ -80,11 +80,13 @@ const upload = require('@jvmn/upload-rsync');
 const inquirer = require('inquirer');
 
 try {
-    const cmd = new upload.cmd({});
+    const cmd = new upload.cmd({
+        'commandlineflag' : true
+    });
     const config = new upload.config(cmd)
         .setConfig({
-            dest: 'user@example.com:/path/to/src',
-            src: ['folder'],
+            dest: 'admin@devel-vmware.neckar.jvm.de:/home/fractal/public_html/rsync',
+            src: ['build'],
             logfile: 'logfile',
             delete: false
         })
@@ -95,23 +97,19 @@ try {
 
     console.log("rsync command: \n" + rsync.rsync.command());
 
-    if (config.executeWithoutPrompt()) {
-        rsync.run();
-    } else {
-        inquirer.prompt([
-            {
-                type: 'confirm',
-                name: 'execute',
-                message: 'Start upload?',
-                default: true
+    inquirer.prompt([
+        {
+            type: 'confirm',
+            name: 'execute',
+            message: 'Start upload?',
+            default: true
+        }
+    ])
+        .then(answers => {
+            if (answers.execute) {
+                rsync.run();
             }
-        ])
-            .then(answers => {
-                if (answers.execute) {
-                    rsync.run();
-                }
-            });
-    }
+        });
 } catch (err) {
     console.log(err.stack)
 }
