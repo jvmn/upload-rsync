@@ -1,6 +1,6 @@
 {
-    "important-notice": 
-        "!! be very careful with the delete flag, you can wipe out an entire server, if you make a mistake with the destination folder. so it is wise to test first without an aktive delete flag !!",
+    "notice": 
+        "Be careful with the delete flag, you can damage your server, if you make a mistake with the destination folder. so it is wise to test first without an active delete flag.",
     "stage": {
         "dev": {
             "dest": "",
