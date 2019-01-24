@@ -117,6 +117,10 @@ try {
 
 ## Changelog
 
+0.0.8
+
+- add callback option to rsync run
+
 0.0.6, 0.0.7
 
 - bump version for npm
